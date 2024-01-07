@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CapybaraApp</string>
+    <string name="alarm_add_new">add alarm</string>
+    <string name="show_next_alarm">show next alarm</string>
 </resources>
