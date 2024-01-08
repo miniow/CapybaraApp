@@ -1,2 +1,5 @@
-package com.example.capybaraapp;public class Alarm {
+package com.example.capybaraapp;
+
+
+public class Alarm {
 }

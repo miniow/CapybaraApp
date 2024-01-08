@@ -6,19 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TimePicker
-        android:id="@+id/time_picker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+
 
 
     <ScrollView
+        android:id="@+id/scrolview"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
-        app:layout_constraintTop_toBottomOf="@+id/time_picker"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent">
         <LinearLayout
@@ -26,11 +22,80 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
+            <TimePicker
+                android:id="@+id/time_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/scrolview"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="7">
+
+                <CheckBox
+
+                    style="@style/CustomCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/monday_letter"
+                    android:layout_weight="1"/>
+                <CheckBox
+
+                    style="@style/CustomCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tuesday_letter"
+                    android:layout_weight="1"/>
+
+                <CheckBox
+
+                    style="@style/CustomCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wednesday_letter"
+                    android:layout_weight="1"/>
+
+                <CheckBox
+
+                    style="@style/CustomCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thursday_letter"
+                    android:layout_weight="1"/>
+                <CheckBox
+
+                    style="@style/CustomCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/friday_letter"
+                    android:layout_weight="1"/>
+                <CheckBox
+
+                    style="@style/CustomCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saturday_letter"
+                    android:layout_weight="1"/>
+                <CheckBox
+                    style="@style/CustomCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sunday_letter"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:minHeight="40dp"
                 android:gravity="center_vertical">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -41,7 +106,7 @@
                     android:background="#00000000"
                     android:id="@+id/alarm_date"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:src="@drawable/ic_calendar"
                     />
 
@@ -59,41 +124,12 @@
 
             <!-- Alarm Sound Switch -->
             <Switch
-                android:id="@+id/adsf"
+                android:id="@+id/alarm_sound"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dźwięk alarmu"
                 android:padding="16dp"
                 android:checked="true" />
-            <Switch
-                android:id="@+id/dfgh"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dźwięk alarmu"
-                android:padding="16dp"
-                android:checked="true" />
-            <Switch
-                android:id="@+id/switch_adfghfdglarm_sound"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dźwięk alarmu"
-                android:padding="16dp"
-                android:checked="true" />
-            <Switch
-                android:id="@+id/switchddddf_alarm_sound"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dźwięk alarmu"
-                android:padding="16dp"
-                android:checked="true" />
-            <Switch
-                android:id="@+id/dfgdhgf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dźwięk alarmu"
-                android:padding="16dp"
-                android:checked="true" />
-
             <!-- Vibration Switch -->
             <Switch
                 android:id="@+id/switch_vibration"
@@ -116,9 +152,12 @@
 
     <LinearLayout
             android:id="@+id/bottom_menu"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scrolview"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             android:padding="5dp">
 
             <Button

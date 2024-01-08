@@ -2,4 +2,11 @@
     <string name="app_name">CapybaraApp</string>
     <string name="alarm_add_new">add alarm</string>
     <string name="show_next_alarm">show next alarm</string>
+    <string name="monday_letter">m</string>
+    <string name="tuesday_letter">t</string>
+    <string name="wednesday_letter">w</string>
+    <string name="thursday_letter">t</string>
+    <string name="friday_letter">f</string>
+    <string name="saturday_letter">s</string>
+    <string name="sunday_letter">s</string>
 </resources>
